@@ -1,19 +1,5 @@
 # SQL Database
 
-## USE
-
-- O `USE` serve especificar o banco de dados(quando há mais de um) antes de realizar uma query:
-
-``` SQL
-USE [database-name];
-```
-
-- Exemplo:
-
-``` SQL
-USE Sakila;
-```
-
 ## SELECT
 
 - No trabalho com banco de dados e SQL, a tarefa mais comum é solicitar dados de uma ou mais tabelas e exibi-los. A instrução SELECT faz isso.
@@ -24,7 +10,7 @@ No entanto, SELECT pode fazer muito mais que simplesmente recuperar e exibir dad
 - O `SELECT` serve para listarmos dados dos campos(colunas) especificados(ou todos com o `*` - *placeholder* que especifica todas as colunas) de uma determinada tabela:
 
 ``` SQL
-USE [database-name];
+USE [database-name]; -- especificando o banco de dados(quando há mais de um) antes de realizar uma query:
 
 SELECT * FROM [table-name];
 -- OR
