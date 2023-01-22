@@ -1,17 +1,5 @@
 # SQL Database
 
-## TABLE
-
-<div align="center">
-  <img width="800" src="https://user-images.githubusercontent.com/86172286/213840736-28840e39-82e4-44f7-9968-f60765816be7.jpg" >
-</div>
-
-## KEYS
-
-<div align="center">
-  <img width="800" src="https://user-images.githubusercontent.com/86172286/213840739-370b8883-34fc-4467-80e5-1ec7b84ee728.jpg" >
-</div>
-
 ## USE
 
 - O `USE` serve especificar o banco de dados(quando há mais de um) antes de realizar uma query:
