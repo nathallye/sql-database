@@ -21,7 +21,7 @@ No entanto, SELECT pode fazer muito mais que simplesmente recuperar e exibir dad
 
 ### Recuperando dados
 
-- O `SELECT` serve para listarmos dados dos campos(colunas) especificados(ou todos com o `*` - placeholder que especifica todas as colunas) de uma determinada tabela:
+- O `SELECT` serve para listarmos dados dos campos(colunas) especificados(ou todos com o `*` - *placeholder* que especifica todas as colunas) de uma determinada tabela:
 
 ``` SQL
 USE [database-name];

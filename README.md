@@ -21,7 +21,7 @@ No entanto, SELECT pode fazer muito mais que simplesmente recuperar e exibir dad
 
 ### Recuperando dados
 
-- O `SELECT` serve para listarmos dados dos campos(colunas) especificados(ou todos com o `*` - placeholder que especifica todas as colunas) de uma determinada tabela:
+- O `SELECT` serve para listarmos dados dos campos(colunas) especificados(ou todos com o `*` - *placeholder* que especifica todas as colunas) de uma determinada tabela:
 
 ``` SQL
 USE [database-name];
@@ -47,7 +47,7 @@ SELECT actor_id, first_name, last_name FROM actor; -- trás somente os campos es
 
 ### Expressões em instruções SELECT
 
-- A instrução SELECT pode fazer muito mais que apenas selecionar colunas. Podemos efetuar cálculos em uma ou mais colunas e incluí-los no resultado da consulta. Exemplo:
+- A instrução SELECT pode fazer muito mais que apenas selecionar colunas. Podemos efetuar `cálculos` em uma ou mais colunas e incluí-los no resultado da consulta. Exemplo:
 
 ``` SQL
 USE Sakila;
@@ -67,10 +67,6 @@ USE Sakila;
 SELECT payment_id, customer_id, amount, round(amount * 1.07, 2) AS taxed_price 
 FROM payment;
 ```
-
-### Concatenação de texto
-
-- As expressões não precisa ser usadas somente com números. Podemos usar expressões com texto e outros tipos de dados. O operador de concatenação é especificado por um pipe duplo (∣∣); os valores de dados a serem concatenados devem ser colocados nos dois lados do pipe duplo. 
 
 ## ORDER BY
 
