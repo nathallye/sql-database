@@ -2,6 +2,10 @@
 
 ## WHERE
 
+- No trabalho com dados, uma tarefa muito comum é a filtragem de registros de acordo com critérios, o que pode ser feito com uma instrução WHERE.
+
+### Filtrando registros
+
 - O `WHERE` serve para adicionarmos uma condição na busca dados especificando um campo ou mais(coluna ou colunas) e realizando uma comparação:
 
 ``` SQL
@@ -30,9 +34,69 @@ SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos esp
 WHERE actor_id = 100; -- trás o registro que contém id igual a 100
 ```
 
+- Inversamente, podemos usar o `!=` ou `<>` para obter todos exceto os atores com id igual a 100: 
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id <> 100; -- trás todos os registros que contém id diferente que 100
+```
+
+- Também podemos usar os operadores de comparação `<`, `>`, `<=`, `>=`. Exemplo:
+
 ``` SQL
 USE Sakila;
 
 SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
 WHERE actor_id <= 10; -- trás todos os registros que contém id menor ou igual que 10
 ```
+
+- Também podemos qualificar intervalos inclusivos("inclusivo" significa que os valores especificados estão incluídos no resultado) usando uma instrução `BETWEEN`. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id BETWEEN 10 and 20; -- traś todos os registros que contém id's de 10 até 20
+```
+
+### Instruções AND, OR e IN
+
+- Uma expressão `BETWEEN` pode ser expressa alternativamente com o uso das expressões maior ou igual a(>=) e menor ou igual a(<=) e uma instrução `AND`. É um pouco mais verboso, mas demostra que podemos usar duas condições com a instrução `AND`. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id >= 10 AND actor_id <= 20; -- traś todos os registros que contém id's de 10 até 20
+```
+
+- Também temos a opção de usar `OR`. Uma instrução `OR`, pelo menos um dos critérios deve ser atendido para o registro se qualificar. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id = 10 OR actor_id = 20; -- traś o registro que contém id igual a 10 ou id igual a 20
+```
+
+- Uma maneira mais eficiente de fazer isso é usando uma instrução `IN` que fornece uma lista de valores. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id IN (10, 20); -- traś o registro que contém id igual a 10 ou id igual a 20
+```
+
+- Se quiséssemos todos os dados exceto os relativos aos id's 10 e 20, poderíamos usar o `NOT IN`. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE actor_id NOT IN (10, 20); -- traś o registro que contém id igual a 10 ou id igual a 20
+```
+
+### Usando WHERE com texto
