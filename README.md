@@ -68,36 +68,6 @@ SELECT payment_id, customer_id, amount, round(amount * 1.07, 2) AS taxed_price
 FROM payment;
 ```
 
-## ORDER BY
-
-- O `ORDER BY` serve para ordenarmos os dados dos campos especificados(ou todos com o `*`.) de uma determinada tabela por um determinado campo(coluna) de forma decrescente(`DESC`) e crescente(`ASC` - padrão):
-
-``` SQL
-USE [database-name];
-
-SELECT * FROM [table-name]
-ORDER BY [column-name];
--- OR
-SELECT [column-name/columns-name] FROM [table-name]
-ORDER BY [column-name];
-```
-
-- Exemplos:
-
-``` SQL
-USE Sakila;
-
-SELECT * FROM actor -- trás todos os campos
-ORDER BY first_name; -- ordenado pelo campo first_name de forma crescente(ASC - padrão)
-```
-
-``` SQL
-USE Sakila;
-
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
-ORDER BY first_name DESC; -- ordenado pelo campo first_name de forma decrescente(DESC)
-```
-
 ## WHERE
 
 - No trabalho com dados, uma tarefa muito comum é a filtragem de registros de acordo com critérios, o que pode ser feito com uma instrução WHERE.
@@ -280,4 +250,34 @@ USE Sakila;
 
 SELECT * FROM address -- trás todos os campos
 WHERE address2 IS NOT NULL; -- traś os registros que endereço2 NÃO é nulo
+```
+
+## ORDER BY
+
+- O `ORDER BY` serve para ordenarmos os dados dos campos especificados(ou todos com o `*`.) de uma determinada tabela por um determinado campo(coluna) de forma decrescente(`DESC`) e crescente(`ASC` - padrão):
+
+``` SQL
+USE [database-name];
+
+SELECT * FROM [table-name]
+ORDER BY [column-name];
+-- OR
+SELECT [column-name/columns-name] FROM [table-name]
+ORDER BY [column-name];
+```
+
+- Exemplos:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM actor -- trás todos os campos
+ORDER BY first_name; -- ordenado pelo campo first_name de forma crescente(ASC - padrão)
+```
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+ORDER BY first_name DESC; -- ordenado pelo campo first_name de forma decrescente(DESC)
 ```
