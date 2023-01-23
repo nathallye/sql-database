@@ -98,7 +98,7 @@ WHERE actor_id = 100; -- trás o registro que contém id igual a 100
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id = 100; -- trás o registro que contém id igual a 100
 ```
 
@@ -107,7 +107,7 @@ WHERE actor_id = 100; -- trás o registro que contém id igual a 100
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor
 WHERE actor_id <> 100; -- trás todos os registros que contém id diferente que 100
 ```
 
@@ -116,7 +116,7 @@ WHERE actor_id <> 100; -- trás todos os registros que contém id diferente que 
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id <= 10; -- trás todos os registros que contém id menor ou igual que 10
 ```
 
@@ -125,7 +125,7 @@ WHERE actor_id <= 10; -- trás todos os registros que contém id menor ou igual 
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id BETWEEN 10 and 20; -- traś todos os registros que contém id's de 10 até 20
 ```
 
@@ -136,7 +136,7 @@ WHERE actor_id BETWEEN 10 and 20; -- traś todos os registros que contém id's d
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id >= 10 AND actor_id <= 20; -- traś todos os registros que contém id's de 10 até 20
 ```
 
@@ -145,7 +145,7 @@ WHERE actor_id >= 10 AND actor_id <= 20; -- traś todos os registros que contém
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id = 10 OR actor_id = 20; -- traś o registro que contém id igual a 10 ou id igual a 20
 ```
 
@@ -154,7 +154,7 @@ WHERE actor_id = 10 OR actor_id = 20; -- traś o registro que contém id igual a
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id IN (10, 20); -- traś o registro que contém id igual a 10 ou id igual a 20
 ```
 
@@ -163,7 +163,7 @@ WHERE actor_id IN (10, 20); -- traś o registro que contém id igual a 10 ou id 
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE actor_id NOT IN (10, 20); -- traś o registro que contém id igual a 10 ou id igual a 20
 ```
 
@@ -174,7 +174,7 @@ WHERE actor_id NOT IN (10, 20); -- traś o registro que contém id igual a 10 ou
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE first_name = 'NICK'; -- traś os registros que contém o primeiro nome igual a NICK
 ```
 
@@ -183,7 +183,7 @@ WHERE first_name = 'NICK'; -- traś os registros que contém o primeiro nome igu
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE length(first_name) >= 6; -- traś os registros que contém o primeiro nome com seis ou mais caracteres
 ```
 
@@ -192,7 +192,7 @@ WHERE length(first_name) >= 6; -- traś os registros que contém o primeiro nome
 ``` SQL
 USE Sakila;
 
-SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE first_name LIKE 'A%'; -- traś os registros que contém o primeiro nome que inicia com a letra A
 ```
 
