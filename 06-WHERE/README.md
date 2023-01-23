@@ -100,3 +100,30 @@ WHERE actor_id NOT IN (10, 20); -- traś o registro que contém id igual a 10 ou
 ```
 
 ### Usando WHERE com texto
+
+- As regras para qualificação de campos de texto seguem a mesma estrutura, embora haja diferenças sutis. Podemos usar instruções `=`, `AND`, `OR` e `IN` com texto. No entanto, ao usar texto(string), é preciso inserir *literais* em aspas simples. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE first_name = 'NICK'; -- traś os registros que contém o primeiro nome igual a NICK
+```
+
+- Há outras operações e funções de texto úteis que podemos usar em instruções WHERE e SELECT. Por exemplo, a função `length()` conta o número de caracteres de um valor específico. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE length(first_name) >= 6; -- traś os registros que contém o primeiro nome com seis ou mais caracteres
+```
+
+- Outra operação comum é o uso de curingas em uma expressão `LIKE`, onde `%` significa qualquer número de caracteres e `_` um único caractere. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
+WHERE first_name LIKE 'A%'; -- traś os registros que contém o primeiro nome que inicia com a letra A
+```
