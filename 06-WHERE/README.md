@@ -127,3 +127,59 @@ USE Sakila;
 SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados(actor_id, first_name, last_name)
 WHERE first_name LIKE 'A%'; -- traś os registros que contém o primeiro nome que inicia com a letra A
 ```
+
+### Usando WHERE com booleanos
+
+- No universo de dados, normalmente falso é expresso como 0 e verdadeiro como 1. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM customer -- trás todos os campos
+WHERE active = 1; -- traś os registros que ativo é igual a 1(true)
+```
+
+- Como estamos buscando somente valores verdadeiros, não é necessário usar a expressçao `= 1`. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM customer -- trás todos os campos
+WHERE active; -- traś os registros que ativo é igual a 1(true)
+```
+
+- Porém, a qualificação de condições falsas precisa ser explícita. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM customer -- trás todos os campos
+WHERE active = 0; -- traś os registros que ativo é igual a 0(false)
+```
+
+- Podemos usar a palavra-chave `NOT` para qualificar como falso. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM customer -- trás todos os campos
+WHERE NOT active; -- traś os registros que ativo é igual a 0(false)
+```
+
+### Manipulando NULL
+
+- Valor nulo é aquele que não apresenta valor. É ausência completa de qualquer conteúdo. Os valores nulos não pode ser determinados com `=`. Precisamos usar as instruções `IS NULL` ou `IS NOT NULL` para identificar valores nulos. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM address -- trás todos os campos
+WHERE address2 IS NULL; -- traś os registros que endereço2 é nulo
+```
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM address -- trás todos os campos
+WHERE address2 IS NOT NULL; -- traś os registros que endereço2 NÃO é nulo
+```
