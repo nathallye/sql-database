@@ -67,4 +67,30 @@ SELECT COUNT(amount) AS payment_amount_count FROM payment; -- trás o campo paym
 - Já usamos a função `COUNT(*)` para contar registros e contar valores não nulos de uma coluna. Porém, há outras funções de agregação, entre elas `SUM()`, `MIN()`, `MAX()` e `AVG()`. Podemos usar funções de agreção em uma coluna específica para executar algum tipo de cálculo nela. Exemplo:
 
 
+``` SQL
+USE Sakila;
 
+SELECT customer_id, AVG(amount) AS amount_avg FROM payment -- trás os campos customer_id e amount_avg com a média do valores...
+GROUP BY customer_id; -- agrupando pelo id do cliente
+```
+
+- Como sempre, podemos usar funções nos valores agregados e executar tarefas como a de arredondamento para melhorar a aparência do resultado. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT customer_id, ROUND(AVG(amount), 2) AS amount_avg FROM payment -- trás os campos customer_id e amount_avg com a média do valores(arredondado em duas casas decimais)...
+GROUP BY customer_id; -- agrupando pelo id do cliente
+```
+
+### Instrução HAVING
+
+- A agregação funciona com o software processando registro a registro e encontrando os que ele deseja manter de acordo com a condição WHERE. Depois, ele  agrupa os registros em GROUP BY e executa as funções de agregação solicitadas, como AVG(). Se quiséssemos filtar pelo valor de `AVG()`, seria preciso que a filtragem ocorresse após o calculo. E aí que entra em cena `HAVING`:
+
+``` SQL
+USE Sakila;
+
+SELECT customer_id, ROUND(AVG(amount), 2) AS amount_avg FROM payment -- trás os campos customer_id e amount_avg com a média do valores de amount(arredondado em duas casas decimais)...
+GROUP BY customer_id -- agrupando pelo id do cliente...
+HAVING AVG(amount) > 4.00; -- filtrando pela média do valores de amount maior que 4.00
+```
