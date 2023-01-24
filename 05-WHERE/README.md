@@ -12,7 +12,7 @@
 USE [database-name];
 
 SELECT * FROM [table-name]
-WHERE [column-name] = [value] -- podemos usar =, <, >, <=, >=
+WHERE [column-name] = [value] -- podemos usar =, <, >, <=, >=, !=
 -- OR
 SELECT [column-name/columns-name] FROM [table-name]
 WHERE [column-name] = [value] 
@@ -43,7 +43,7 @@ SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos esp
 WHERE actor_id <> 100; -- trás todos os registros que contém id diferente que 100
 ```
 
-- Também podemos usar os operadores de comparação `<`, `>`, `<=`, `>=`. Exemplo:
+- Também podemos usar os operadores de comparação `<`, `>`, `<=`, `>=`, `!=`. Exemplo:
 
 ``` SQL
 USE Sakila;
