@@ -110,6 +110,8 @@ SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos esp
 WHERE first_name = 'NICK'; -- traś os registros que contém o primeiro nome igual a NICK
 ```
 
+#### length()
+
 - Há outras operações e funções de texto úteis que podemos usar em instruções WHERE e SELECT. Por exemplo, a função `length()` conta o número de caracteres de um valor específico. Exemplo:
 
 ``` SQL
@@ -118,6 +120,8 @@ USE Sakila;
 SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos especificados
 WHERE length(first_name) >= 6; -- traś os registros que contém o primeiro nome com seis ou mais caracteres
 ```
+
+#### LIKE
 
 - Outra operação comum é o uso de curingas em uma expressão `LIKE`, onde `%` significa qualquer número de caracteres e `_` um único caractere. Exemplo:
 
@@ -128,7 +132,7 @@ SELECT actor_id, first_name, last_name FROM actor -- trás somente os campos esp
 WHERE first_name LIKE 'A%'; -- traś os registros que contém o primeiro nome que inicia com a letra A
 ```
 
-**Obs.:** Cada padrão define um conjunto de cadeias de caracteres. A expressão `LIKE` retorna verdade se a *cadeia_de_caracteres* estiver contida no conjunto de cadeias de caracteres representado pelo padrão; como esperado, a expressão `NOT LIKE` retorna falso quando LIKE retorna verdade, e vice-versa, e a expressão equivalente é NOT (cadeia_de_caracteres LIKE padrão).
+Cada padrão define um conjunto de cadeias de caracteres. A expressão `LIKE` retorna verdade se a *cadeia_de_caracteres* estiver contida no conjunto de cadeias de caracteres representado pelo padrão; como esperado, a expressão `NOT LIKE` retorna falso quando LIKE retorna verdade, e vice-versa, e a expressão equivalente é NOT (cadeia_de_caracteres LIKE padrão).
 
 Quando o padrão não contém os caracteres percentagem ou sublinhado, o padrão representa apenas a própria cadeia de caracteres; neste caso LIKE atua como o operador igual. No padrão o caractere sublinhado (_) representa (corresponde a) qualquer um único caractere; o caractere percentagem (%) corresponde a qualquer cadeia com zero ou mais caracteres.
 
