@@ -4,7 +4,7 @@
 
 ### INNER JOIN
 
-- Até o momento usamos o SELECT para filtrar campos/colunas de uma tabela. Agora, para filtrarmos campos de multiplas tabelas e gerar um resultado, vamos usar o `INNER JOIN`(ou só JOIN, implicitamente é INNER JOIN):
+- Até o momento usamos o SELECT para filtrar campos/colunas de uma tabela. Agora, para filtrarmos campos de multiplas tabelas e gerar um resultado, vamos usar o `INNER JOIN`(ou só `JOIN`, que implicitamente é INNER JOIN):
 
 ``` SQL
 USE [database-name];
