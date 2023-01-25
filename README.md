@@ -227,7 +227,7 @@ Deve ser observado que a contrabarra também possui significado especial nos lit
 USE Sakila;
 
 SELECT * FROM actor -- trás todos os campos
-WHERE first_name REGEXP '^A|^B'; -- traś os registros que o primeiro nome inicia com A ou com B
+WHERE first_name REGEXP '^A|^B'; -- trás os registros que o primeiro nome inicia com A ou com B
 ```
 
 ### Usando WHERE com booleanos
@@ -238,7 +238,7 @@ WHERE first_name REGEXP '^A|^B'; -- traś os registros que o primeiro nome inici
 USE Sakila;
 
 SELECT * FROM customer -- trás todos os campos
-WHERE active = 1; -- traś os registros que ativo é igual a 1(true)
+WHERE active = 1; -- trás os registros que ativo é igual a 1(true)
 ```
 
 - Como estamos buscando somente valores verdadeiros, não é necessário usar a expressçao `= 1`. Exemplo:
@@ -247,7 +247,7 @@ WHERE active = 1; -- traś os registros que ativo é igual a 1(true)
 USE Sakila;
 
 SELECT * FROM customer -- trás todos os campos
-WHERE active; -- traś os registros que ativo é igual a 1(true)
+WHERE active; -- trás os registros que ativo é igual a 1(true)
 ```
 
 - Porém, a qualificação de condições falsas precisa ser explícita. Exemplo:
@@ -256,7 +256,7 @@ WHERE active; -- traś os registros que ativo é igual a 1(true)
 USE Sakila;
 
 SELECT * FROM customer -- trás todos os campos
-WHERE active = 0; -- traś os registros que ativo é igual a 0(false)
+WHERE active = 0; -- trás os registros que ativo é igual a 0(false)
 ```
 
 - Podemos usar a palavra-chave `NOT` para qualificar como falso. Exemplo:
@@ -265,7 +265,7 @@ WHERE active = 0; -- traś os registros que ativo é igual a 0(false)
 USE Sakila;
 
 SELECT * FROM customer -- trás todos os campos
-WHERE NOT active; -- traś os registros que ativo é igual a 0(false)
+WHERE NOT active; -- trás os registros que ativo é igual a 0(false)
 ```
 
 ### Manipulando NULL
@@ -276,14 +276,14 @@ WHERE NOT active; -- traś os registros que ativo é igual a 0(false)
 USE Sakila;
 
 SELECT * FROM address -- trás todos os campos
-WHERE address2 IS NULL; -- traś os registros que endereço2 é nulo
+WHERE address2 IS NULL; -- trás os registros que endereço2 é nulo
 ```
 
 ``` SQL
 USE Sakila;
 
 SELECT * FROM address -- trás todos os campos
-WHERE address2 IS NOT NULL; -- traś os registros que endereço2 NÃO é nulo
+WHERE address2 IS NOT NULL; -- trás os registros que endereço2 NÃO é nulo
 ```
 
 ## GROUP BY
