@@ -151,6 +151,17 @@ Para corresponder ao próprio caractere sublinhado ou percentagem, sem correspon
 
 Deve ser observado que a contrabarra também possui significado especial nos literais cadeias de caracteres e, portanto, para escrever em uma constante um padrão contendo uma contrabarra devem ser escritas duas contrabarras no comando SQL. Assim sendo, para escrever um padrão que corresponda ao literal contrabarra é necessário escrever quatro contrabarras no comando, o que pode ser evitado escolhendo um caractere de escape diferente na cláusula ESCAPE; assim a contrabarra deixa de ser um caractere especial para o LIKE (Mas continua sendo especial para o analisador de literais cadeias de caracteres e, por isso, continuam sendo necessárias duas contrabarras).
 
+### REGEXP
+
+- Também podemos usar expressões regulares para filtrar a busca do campos de texto. Exemplo:
+
+``` SQL
+USE Sakila;
+
+SELECT * FROM actor -- trás todos os campos
+WHERE first_name REGEXP '^A|^B'; -- traś os registros que o primeiro nome inicia com A ou com B
+```
+
 ### Usando WHERE com booleanos
 
 - No universo de dados, normalmente falso é expresso como 0 e verdadeiro como 1. Exemplo:
