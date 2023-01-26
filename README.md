@@ -502,3 +502,50 @@ FROM customer AS c
 JOIN payment p ON c.customer_id = p.customer_id
 WHERE p.amount < 10.99; -- onde o valor do pagamento é menor 10.99
 ```
+
+## INSERT
+
+- Para adicionarmos um novo registro a uma tabela podemos usar o comando `INSERT`. Exemplo:
+
+``` SQL
+USE sakila;
+
+INSERT INTO category
+VALUES
+	(default, 'Animation', '2023-01-15 04:46:27'); -- default, significa que ele vai usar o padrão auto incremento
+```
+
+- Também podemos adicionar mais de um registro a uma tabela ao mesmo tempo. Exemplo:
+
+``` SQL
+USE sakila;
+
+INSERT INTO category
+VALUES
+	(default, 'Animation', '2023-01-15 04:46:27'),
+  (default, 'Classics', '2023-01-15 04:46:50'),
+  (default, 'Comedy', '2023-01-15 04:46:55');
+```
+
+## UPDATE
+
+- Para atualizarmos registros de uma tabela podemos usar o comando `UPDATE`. Exemplo:
+
+``` SQL
+USE sakila;
+
+UPDATE payment
+SET amount = 15.99
+WHERE payment_id = 1;
+```
+
+## DELETE
+
+- Para removermos registros de uma tabela podemos usar o comando `DELETE`. Exemplo:
+
+``` SQL
+USE sakila;
+
+DELETE FROM payment
+WHERE payment_id = 1;
+```

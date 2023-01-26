@@ -2,7 +2,7 @@
 
 ## INSERT
 
-- Para adicionarmos novos registros a uma tabela podemos usar o comando `INSERT`. Exemplo:
+- Para adicionarmos um novo registro a uma tabela podemos usar o comando `INSERT`. Exemplo:
 
 ``` SQL
 USE sakila;
