@@ -522,7 +522,7 @@ USE sakila;
 
 INSERT INTO category
 VALUES
-	(default, 'Animation', '2023-01-15 04:46:27'),
+  (default, 'Animation', '2023-01-15 04:46:27'),
   (default, 'Classics', '2023-01-15 04:46:50'),
   (default, 'Comedy', '2023-01-15 04:46:55');
 ```
